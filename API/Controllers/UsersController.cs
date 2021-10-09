@@ -30,6 +30,7 @@ namespace API.Controllers
       _userRepository = userRepository;
     }
 
+    // [Authorize(Roles = "Admin")]
     [HttpGet]
     // [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
