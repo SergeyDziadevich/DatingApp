@@ -16,7 +16,7 @@ export class MemberCardComponent implements OnInit {
     private memberService: MembersService,
     private toastr: ToastrService,
     public presence: PresenceService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
   }
