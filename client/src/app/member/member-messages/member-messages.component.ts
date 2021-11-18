@@ -14,16 +14,14 @@ export class MemberMessagesComponent implements OnInit {
   @ViewChild('messageFrom') messageForm: NgForm;
   messageContent: string;
 
-  constructor(private messageService: MessageService) { }
+  constructor(public messageService: MessageService) { }
 
   ngOnInit(): void {
   }
 
   sendMessage(): void {
-    this.messageService.sendMessage(this.username, this.messageContent).subscribe(message => {
-      this.messages.push(message);
+    this.messageService.sendMessage(this.username, this.messageContent).then(() => {
       this.messageForm.reset();
     });
   }
-
 }
