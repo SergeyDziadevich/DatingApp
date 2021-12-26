@@ -59,7 +59,6 @@ namespace API.Extensions
                 options.UseNpgsql(connStr);
             });
 
-            
             return services;
         }
     }
